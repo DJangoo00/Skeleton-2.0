@@ -29,9 +29,6 @@ namespace Persistencia.Data.Configuration
             .HasColumnType("int")
             .HasMaxLength(7);
 
-            builder.HasOne(p => p.Laboratorio)
-            .WithMany(p => p.Medicamentos)
-            .HasForeignKey(p => p.IdLaboratorioFk);
 
             builder
             .HasMany(p => p.Proveedores)

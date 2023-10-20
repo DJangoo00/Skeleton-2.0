@@ -7,7 +7,5 @@ public class MovimientoMedicamento : BaseEntity
     public int IdPropietarioFk {get; set;}
     public Propietario Propietario {get; set;}
     public int IdTipMovFk { get; set; }
-    public TipoMovimiento TipoMovimiento { get; set; }
     public int Total { get; set; }
-    public ICollection<DetalleMovimiento> DetallesMovimientos {get; set;}
 }

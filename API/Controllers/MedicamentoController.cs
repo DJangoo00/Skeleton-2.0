@@ -138,7 +138,7 @@ public class MedicamentoController : BaseApiController
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<Pager<MedicamentoDto>>> GetPagination([FromQuery] Params pagparams)
     {
-        var entidad = await unitofwork.Especies.GetAllAsync(pagparams.PageIndex, pagparams.PageSize, pagparams.Search);
+        var entidad = await unitofwork.Medicamentos.GetAllAsync(pagparams.PageIndex, pagparams.PageSize, pagparams.Search);
         var listEntidad = mapper.Map<List<MedicamentoDto>>(entidad.registros);
         return new Pager<MedicamentoDto>(listEntidad, entidad.totalRegistros, pagparams.PageIndex, pagparams.PageSize, pagparams.Search);
     }

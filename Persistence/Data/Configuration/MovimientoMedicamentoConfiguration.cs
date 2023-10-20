@@ -30,10 +30,6 @@ namespace Persistencia.Data.Configuration
             builder.HasOne(p => p.Propietario)
             .WithMany(p => p.MovimientosMedicamentos)
             .HasForeignKey(p => p.IdPropietarioFk);
-
-            builder.HasOne(p => p.TipoMovimiento)
-            .WithMany(p => p.MovimientosMedicamentos)
-            .HasForeignKey(p => p.IdTipMovFk);
         }
     }
 }
